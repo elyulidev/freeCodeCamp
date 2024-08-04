@@ -1,0 +1,19 @@
+{
+	"name": "shorturl",
+	"version": "0.0.3",
+	"description": "API project for freeCodeCamp",
+	"main": "index.js",
+	"scripts": {
+		"start": "node --watch src/index.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"pg": "^8.12.0",
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.37.3"
+	},
+	"license": "MIT"
+}
