@@ -16,7 +16,7 @@ const createOneUser = async (username) => {
 		where: { username },
 		fields: ["username", "id"],
 	});
-	//console.log("newUser>>>", newUser[0]);
+
 	return newUser[0];
 };
 
@@ -55,8 +55,6 @@ const getUserLogs = async (userId, startDate, endDate, limit) => {
 		};
 	}
 
-	console.log("options>>>", options);
-
 	const user = await User.findAndCountAll({
 		where: { id: userId },
 		include: {
@@ -67,8 +65,6 @@ const getUserLogs = async (userId, startDate, endDate, limit) => {
 			limit: limit || 5,
 		},
 	});
-
-	//console.log("user>>>", user);
 
 	if (!user) {
 		throw { error: "NotFoundError", status: 404, message: "User not found" };

@@ -70,11 +70,6 @@ const getUserLogsController = async (req, res, next) => {
 		const to = req.query.to;
 		const limit = req.query.limit;
 
-		console.log("userId", userId);
-		console.log("from", from);
-		console.log("to", to);
-		console.log("limit", limit);
-
 		const userLogs = await getUserLogs(userId, from, to, limit);
 
 		return res.status(200).json(userLogs);
