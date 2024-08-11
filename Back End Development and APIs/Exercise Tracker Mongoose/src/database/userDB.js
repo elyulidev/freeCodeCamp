@@ -36,7 +36,7 @@ const createExerciseForUser = async (userId, exercise) => {
 	const newExercise = await Exercise.create(exercise);
 
 	return {
-		_id: newExercise?._id,
+		_id: user?._id,
 		username: newExercise?.username,
 		date: new Date(newExercise?.date).toDateString(),
 		duration: newExercise?.duration,
